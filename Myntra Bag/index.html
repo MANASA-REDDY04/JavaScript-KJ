@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .bag{
+      border: none;
+      background-color: rgb(100, 233, 100);
+      border-radius: 10px;
+      height: 30px;
+      padding: 0px 20px;
+    }
+    #wishlist{
+      border: 2px solid black;
+      border-radius: 10px;
+      height: 30px;
+      padding: 0px 30px;
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <button class="bag" onclick="
+    cartQuantity += 1
+    document.querySelector('#msg').innerHTML = `Your cart has ${cartQuantity} items`;">
+    Add to Bag</button>
+  <button id="wishlist"
+  onclick="
+   cartQuantity -= 1
+    document.querySelector('#msg').innerHTML = `Your cart has ${cartQuantity} items`;">MOVE TO WISHLIST</button>
+  <button class="bag" onclick="
+   cartQuantity += 2
+    document.querySelector('#msg').innerHTML = `Your cart has ${cartQuantity} items`;">Add 1+1 sale item</button>
+  <h1 id="msg"></h1>
+  <script>
+    let cartQuantity = 0;
+    document.querySelector('#msg').innerHTML = `Your cart has ${cartQuantity} items`;
+  </script>
+</body>
+</html>

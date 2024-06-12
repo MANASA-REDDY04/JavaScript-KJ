@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Shopping List</h1>
+  <input type="text" placeholder="Enter item" id="item-input">
+  <button id="add-btn" onclick="addItem()">add</button>
+  <div class="item-container"></div>
+
+  <script>
+    let items = ['sunscreen']
+    displayItem()
+    function addItem(){
+      let itemValue = document.querySelector('#item-input')
+      items.push(itemValue.value)
+      itemValue.value = ''
+      displayItem()
+    }
+    function displayItem(){
+      let newHtml = ''
+      for(let i = 0; i < items.length; i++){
+        let item = items[i]
+        newHtml += `
+        <div>${item}</div>
+        `
+      }
+      let list = document.querySelector('.item-container');
+      list.innerHTML = newHtml;
+    }
+    console.log(items)
+  </script>
+</body>
+</html>

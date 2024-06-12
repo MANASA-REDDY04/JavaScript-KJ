@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="my-btn">Clicky clickoo</button>
+  <script>
+    let behaviour = event => console.log("I'am clicked")
+    let printDate = event => console.log(`${new Date}`)
+    let buttonElement = document.querySelector('#my-btn')
+
+    buttonElement.addEventListener('click',behaviour)
+    buttonElement.addEventListener('click',printDate)
+
+  </script>
+</body>
+</html>

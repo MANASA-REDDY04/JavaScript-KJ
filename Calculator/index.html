@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Calculator</h1></header>
+  <main>
+    <div class="calci-container">
+      <input type="text" id="input-output" readonly>
+      <br>
+      <div class="buttons-container">
+        <button id="clear" class="buttons"
+        onclick="currValue = '';
+        document.querySelector('#input-output').value = currValue;"
+      >C</button>
+        <button id="one" class="buttons"
+        onclick="currValue += '1'; 
+        document.querySelector('#input-output').value = currValue;">1</button>
+
+        <button id="two" class="buttons"
+        onclick="currValue += '2'; 
+        document.querySelector('#input-output').value = currValue;">2</button>
+
+        <button id="plus" class="buttons"
+        onclick="currValue += '+'; 
+        document.querySelector('#input-output').value = currValue;">+</button>
+
+        <button id="three" class="buttons"
+        onclick="currValue += '3'; 
+        document.querySelector('#input-output').value = currValue;">3</button>
+
+        <button id="four" class="buttons"
+        onclick="currValue += '4'; 
+        document.querySelector('#input-output').value = currValue;">4</button>
+
+        <button id="minus" class="buttons"
+        onclick="currValue += '-'; 
+        document.querySelector('#input-output').value = currValue;">-</button>
+
+        <button id="five" class="buttons"
+        onclick="currValue += '5'; 
+        document.querySelector('#input-output').value = currValue;">5</button>
+
+        <button id="six" class="buttons"
+        onclick="currValue += '6'; 
+        document.querySelector('#input-output').value = currValue;">6</button>
+
+        <button id="multiply" class="buttons"
+        onclick="currValue += '*'; 
+        document.querySelector('#input-output').value = currValue;">*</button>
+
+        <button id="seven" class="buttons"
+        onclick="currValue += '7'; 
+        document.querySelector('#input-output').value = currValue;">7</button>
+
+        <button id="eight" class="buttons"
+        onclick="currValue += '8'; 
+        document.querySelector('#input-output').value = currValue;">8</button>
+
+        <button id="divide" class="buttons"
+        onclick="currValue += '/'; 
+        document.querySelector('#input-output').value = currValue;">/</button>
+
+        <button id="equals" class="buttons"
+        onclick="currValue = eval(currValue); 
+        document.querySelector('#input-output').value = currValue;">=</button>
+
+        <button id="nine" class="buttons"
+        onclick="currValue += '9'; 
+        document.querySelector('#input-output').value = currValue;">9</button>
+
+        <button id="zero" class="buttons"
+        onclick="currValue += '0'; 
+        document.querySelector('#input-output').value = currValue;">0</button>
+
+        <button id="decimal" class="buttons"
+        onclick="currValue += '.'; 
+        document.querySelector('#input-output').value = currValue;">.</button>
+      </div>
+    </div>
+  </main>
+  <script>
+    let currValue = '';
+    document.querySelector('#input-output').value = currValue;  
+  </script>
+</body>
+</html>

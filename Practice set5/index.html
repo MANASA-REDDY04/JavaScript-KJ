@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    button{
+      color: white;
+      height: 50px;
+      width: 50px;
+      border: none;
+      border-radius: 50%;
+      font-size: 30px;
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <h2 id="greet"></h2>
+  <br><br>
+  <button onclick="Displaycount()"></button>
+  <script>
+    let date = new Date();
+    let hour = date.getHours();
+    let name = 'Manasa';
+    if(hour < 12) 
+      document.querySelector('#greet').innerHTML = `Good Morning ${name}`;
+    else if(hour < 18)
+      document.querySelector('#greet').innerHTML = `Good Evening ${name}`;
+    else
+      document.querySelector('#greet').innerHTML = `Good Night ${name}`;
+
+    let count = localStorage.getItem('count') || 0;
+
+    function Displaycount(){
+      count ++;
+      localStorage.setItem('count',count);
+      updateButton();
+    }
+    function updateButton(){
+      let result = document.querySelector('button');
+      result.innerText = count;
+      if(count % 2 == 0)
+        result.style.backgroundColor = 'green'
+      else
+        result.style.backgroundColor = 'red'
+    }
+    updateButton()
+    // localStorage.clear()
+  </script>
+</body>
+</html>

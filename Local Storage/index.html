@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    localStorage.setItem('Name','Manasa');
+    localStorage.setItem('Age','19');
+
+    console.log(localStorage.getItem('Name'));
+
+    let product = {
+        company : 'Zara',
+        price : 740,
+        item_name: 't-shirt', 
+      }
+
+    localStorage.setItem('product',JSON.stringify(product));
+    console.log(localStorage.getItem('product'))
+
+    // remove
+    localStorage.removeItem('Age')
+
+    // clear
+     localStorage.clear();
+
+  </script>
+</body>
+</html>
